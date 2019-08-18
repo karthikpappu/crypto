@@ -9,7 +9,7 @@ def get_last_blockchain_value():
 
 def add_value(transaction_amount,last_transaction=[1]):
   ''''Append a new value as weel as the last blockchain value to the blockchain'''
-    blockchain.append([last_transaction,transaction_amount])
+  blockchain.append([last_transaction,transaction_amount])
 
 
 def get_user_input():
@@ -29,4 +29,9 @@ tx_amount = get_user_input()
 add_value(tx_amount,get_last_blockchain_value())
 
 
-print(blockchain)
+for block in blockchain:
+    print('Outputting Block')
+    print(block)
+
+
+print('Done!!!!')
